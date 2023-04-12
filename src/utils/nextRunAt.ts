@@ -22,7 +22,7 @@ export function isValidHumanInterval(value: unknown): value is string {
  */
 export const computeFromInterval = (attrs: IJobParameters<any>): Date => {
 	const previousNextRunAt = attrs.nextRunAt || new Date();
-	log('[%s:%s] computing next run via interval [%s]', attrs.name, attrs._id, attrs.repeatInterval);
+	log('[%s:%s] computing next run via interval .... [%s]', attrs.name, attrs._id, attrs.repeatInterval);
 
 	const lastRun = dateForTimezone(attrs.lastRunAt || new Date(), attrs.repeatTimezone);
 
